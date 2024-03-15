@@ -35,7 +35,6 @@ const PaymentBar = () => {
             </div>
             <Link href="/payment">
             <button
-              onClick={handleClick}
               className="text-white bg-blue-500 px-3 py-2 rounded-md whitespace-nowrap"
             >
               Payment
