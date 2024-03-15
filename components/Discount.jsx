@@ -42,12 +42,15 @@ const Discount = () => {
 
   return (
     <div className="flex flex-col gap-3">
-      <label htmlFor="promo" className="text-gray-500 font-bold">
+      <label
+        htmlFor="promo"
+        className="text-gray-500 font-bold dark:text-white"
+      >
         Promo Code
       </label>
-      <div className="flex rounded-lg items-center border-gray-300 border justify-between ">
+      <div className="flex rounded-lg items-center dark:border-neutral-700 border-gray-300 border justify-between ">
         <input
-          className="p-3 focus:outline-none w-full"
+          className="p-3 dark:bg-transparent focus:outline-none w-full"
           type="text"
           name="promo"
           value={promo}
@@ -55,7 +58,7 @@ const Discount = () => {
           placeholder="Apply Promo Code"
         />
         <button
-          className="whitespace-nowrap py-4 px-8 bg-gray-300 text-sm font-bold rounded-r-lg"
+          className="whitespace-nowrap py-4 px-8 dark:bg-neutral-700 bg-gray-300 text-sm font-bold rounded-r-lg"
           onClick={handleClick}
         >
           {btnClick ? "Remove" : "Apply"}

@@ -3,7 +3,6 @@
 import { useSelector } from "react-redux";
 import { cartDetails, totalPrice } from "@/lib/features/cartDetailsSlice";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
 
 const PaymentBar = () => {
@@ -14,7 +13,7 @@ const PaymentBar = () => {
 
   return (
     <div className="fixed left-0 bottom-0 z-10 w-full">
-      <div className="flex justify-between items-center border-gray-200 border-2 bg-white p-6">
+      <div className="flex justify-between items-center border-gray-200 border-2 bg-white dark:bg-neutral-900 dark:border-none p-6">
         {pathName === "/payment" ? (
           <div className="flex flex-col w-full gap-7">
             <div className="flex justify-between font-bold">
@@ -34,11 +33,9 @@ const PaymentBar = () => {
               <p className="font-bold">{orders.products && `$${total}`}</p>
             </div>
             <Link href="/payment">
-            <button
-              className="text-white bg-blue-500 px-3 py-2 rounded-md whitespace-nowrap"
-            >
-              Payment
-            </button>
+              <button className="text-white bg-blue-500 px-3 py-2 rounded-md whitespace-nowrap">
+                Payment
+              </button>
             </Link>
           </>
         )}

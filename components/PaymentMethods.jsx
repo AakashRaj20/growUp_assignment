@@ -41,19 +41,19 @@ const PaymentMethods = () => {
       {paymentMethods.map((item, index) => (
         <div
           key={index}
-          className="flex items-center justify-between rounded-lg shadow-md p-4 cursor-pointer"
+          className="flex items-center justify-between rounded-lg dark:bg-neutral-900 shadow-md p-4 md:p-6 cursor-pointer"
           onClick={() => handleClick(item.methodname)}
         >
           <div className="flex items-center gap-4">
             <Image src={item.src} alt={item.alt} width={50} height={50} />
-            <p className="text-gray-600 font-medium">
+            <p className="text-gray-600 dark:text-white font-medium">
               {item.methodname === "CARDS"
                 ? "Debit/Credit Cards"
                 : item.methodname}
             </p>
           </div>
           <input
-            className="w-6 h-6 border-2 border-gray-400 rounded-full checked:border-blue-400 checked:border-8"
+            className="w-6 h-6 border-2 border-gray-400 dark:border-white rounded-full checked:border-blue-400 checked:border-8"
             type="radio"
             name="payment"
             id={item.id}

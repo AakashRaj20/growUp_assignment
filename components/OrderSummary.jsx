@@ -46,14 +46,16 @@ const OrderSummary = () => {
 
   return (
     <div className="flex flex-col gap-5 w-full">
-      <h2 className="text-xl font-bold text-gray-700">Order Summary</h2>
-      <div className="flex flex-col gap-2 shadow-md px-2 py-3">
+      <h2 className="text-xl font-bold dark:text-white text-gray-700">
+        Order Summary
+      </h2>
+      <div className="flex flex-col gap-2 dark:bg-neutral-900 shadow-md px-2 py-3 rounded-lg md:p-6">
         {orders.products &&
           summary.map((item, index) => {
             return (
               <div
                 key={index}
-                className="flex justify-between text-base font-medium text-gray-500"
+                className="flex justify-between text-base font-medium dark:text-white text-gray-500"
               >
                 <p>{item.title}</p>
                 <p>{`$${item.value}`}</p>
